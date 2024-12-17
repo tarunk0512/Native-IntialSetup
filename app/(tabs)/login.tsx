@@ -1,10 +1,9 @@
 import { Image, StyleSheet, Platform } from 'react-native';
-import { View, Text, Button, TextInput, TouchableOpacity } from 'react-native';
+
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import React, { useState } from 'react';
 
 export default function HomeScreen() {
   return (
@@ -17,28 +16,13 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-      <ThemedText type="title">Hello</ThemedText>
-      
+      <ThemedText type="title">Hello Surbhi</ThemedText>
+      <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-      {/* <ThemedText type="subtitle">Step 1: Try it</ThemedText> */}
-      <View style={styles.stepContainer}> 
-        <TextInput style={styles.loginContainer} placeholder="Username"  /> 
-        <TextInput style={styles.loginContainer} placeholder="Password"  /> 
-
-        </View>
-
-        <View style={styles.container}>
-           <View style={styles.buttonContainer}> 
-            <Button title="Login"  color="#EE82EE" />
-             </View> 
-             </View>
-      {/* onPress={() => navigation.navigate('Login')} /> */}
-      </ThemedView>
-      {/* <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
+          Edit <ThemedText type="defaultSemiBold">app/(tabs)/login.tsx</ThemedText> to see changes.
           Press{' '}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
@@ -49,14 +33,14 @@ export default function HomeScreen() {
           </ThemedText>{' '}
           to open developer tools.
         </ThemedText>
-      </ThemedView> */}
-      {/* <ThemedView style={styles.stepContainer}>
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 2: Explore</ThemedText>
         <ThemedText>
           Tap the Explore tab to learn more about what's included in this starter app.
         </ThemedText>
-      </ThemedView> */}
-      {/* <ThemedView style={styles.stepContainer}>
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
         <ThemedText>
           When you're ready, run{' '}
@@ -65,7 +49,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-      </ThemedView> */}
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -75,40 +59,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-
   },
   stepContainer: {
     gap: 8,
     marginBottom: 8,
-    
-  },
-  loginContainer:{
-    height: 40, 
-    borderColor: 'white', 
-    borderWidth: 1, 
-    marginBottom: 12, 
-    paddingHorizontal: 8,
-    borderRadius: 50,
-    backgroundColor: 'white', // Adjust this value to make the border more or less curved
   },
   reactLogo: {
     height: 178,
-    width: '80%',
+    width: 290,
     bottom: 0,
-    left: '10%',
+    left: 0,
     position: 'absolute',
   },
-  container: { 
-    flex: 1, 
-    justifyContent: 'center', 
-    alignItems: 'center',
-  }, 
-    buttonContainer: { 
-      width: '80%', 
-      margin: 10, 
-      height: 40, 
-      paddingHorizontal: 10, 
-      borderRadius: 10, 
-      backgroundColor: "#EE82EE", // Button background color 
-      },
 });
